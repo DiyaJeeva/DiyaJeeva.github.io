@@ -30,7 +30,7 @@
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
         <a class="navbar-item" href = "index.html">
-            Home
+            Gallery
         </a>
 
         <a class="navbar-item" href="aboutme.html">
@@ -72,6 +72,46 @@
     
     <h1 class="title">Projects</h1>
 
+  <section class="section">
+    <div class="container has-text-centered">
+      <button class="button is-primary is-large" id="openModal">
+        Open Modal
+      </button>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="challengeModal">
+    <div class="modal-background"></div>
+    <div class="modal-content box has-text-centered">
+      <h1 class="title" id="modalTitle">Perse Coding Challenge</h1>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <script>
+    const modal = document.getElementById("challengeModal");
+    const openModalBtn = document.getElementById("openModal");
+    const closeModalBtn = modal.querySelector(".modal-close");
+    const modalTitle = document.getElementById("modalTitle");
+
+    openModalBtn.addEventListener("click", () => {
+      modal.classList.add("is-active");
+      modalTitle.textContent = "Perse Coding Challenge";
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      modal.classList.remove("is-active");
+    });
+
+    modal.querySelector(".modal-background").addEventListener("click", () => {
+      modal.classList.remove("is-active");
+    });
+
+    modal.querySelector(".modal-content").addEventListener("click", () => {
+      modalTitle.textContent = "I had an amazing time participating";
+    });
+  </script>
 
 </body>
 
