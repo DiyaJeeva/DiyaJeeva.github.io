@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects – Diya Jeeva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bulma & FontAwesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" />
+  <style>
+    body {
+      background: #fafafa;
+      color: #222;
+      font-family: 'Inter', system-ui, sans-serif;
+      padding-top: 1rem;
+    }
+    .hero.is-block {
+      background: none;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+    .hero .hero-body {
+      padding: 2.5rem 1.5rem;
+    }
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: #0a3d91;
+      letter-spacing: -0.025em;
+    }
+    .hero-subtitle {
+      font-size: 1.4rem;
+      color: #444;
+      font-weight: 500;
+    }
+    .content-section {
+      background: linear-gradient(145deg,#f7f9ff,#e3eeff);
+      border-radius: 1rem;
+      box-shadow: 0 8px 22px rgba(17,85,204,0.1);
+      margin-bottom: 2.5rem;
+      padding: 2.2rem 2rem 1.2rem;
+      transition: box-shadow 0.3s;
+    }
+    .content-section:hover {
+      box-shadow: 0 12px 40px rgba(17,85,204,0.15);
+    }
+    .content-section h3 {
+      color: #1155cc;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+      gap: 0.75rem;
+    }
+    .content-section h3 .icon { 
+      font-size: 1.4rem;
+      color: #0a3d91;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .content-section:hover h3 .icon {
+      transform: scale(1.1);
+      color: #1155cc;
+    }
+    ul.icon-list, ul.project-list {
+      list-style: none;
+      margin: 0.5rem 0 1.2rem;
+      padding-left: 1.4rem;
+    }
+    ul.icon-list li, ul.project-list li {
+      margin-bottom: 1.1rem;
+      padding-left: 2.2rem;
+      position: relative;
+      font-size: 1rem;
+    }
+    ul.icon-list .icon, ul.project-list .icon {
+      position: absolute;
+      left: 0;
+      top: 0.17em;
+      color: #1155cc;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    ul.icon-list li:hover, ul.project-list li:hover {
+      color: #1155cc;
+    }
+    .section.bg-alt {
+      background: #e7f0ff;
+    }
+    .btn-modern {
+      background-color: #1155cc;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.75em 1.75em;
+      border-radius: 0.5em;
+      font-size: 1.05rem;
+      border: none;
+      box-shadow: 0 3px 10px rgba(17, 85, 204, 0.16);
+      transition: background 0.2s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6em;
+      user-select: none;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-modern:hover, .btn-modern:focus {
+      background: #0a3d91;
+      color:#fff;
+      box-shadow: 0 4px 16px rgba(17, 85, 204, 0.30);
+      outline: none;
+    }
+    .footer {
+      background: #0a3d91;
+      color: #eef;
+      padding: 2.2rem 0 1.4rem;
+      font-size: 0.97rem;
+      text-align: center;
+      letter-spacing: .01em;
+    }
+    .footer a {color: #bbe1ff; text-decoration: underline;}
+    @media (max-width: 900px){
+      .hero .columns {flex-direction: column;}
+      .hero .column {margin-bottom: 2rem;}
+    }
+    @media (max-width: 720px) {
+      .hero-title {font-size:2.1rem;}
+      .hero-image {max-width:90vw;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Modern Sticky Navbar -->
+  <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation" style="background:#fff;">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#"><span class="has-text-weight-bold" style="font-size:1.3rem;color:#1155cc;">Diya Jeeva</span></a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNav" class="navbar-menu is-active">
+        <div class="navbar-end">
+          <a href="index.html" class="navbar-item">Profile Summary</a>
+          <a href="aboutme.html" class="navbar-item">About Me</a>
+          <a href="entry.html" class="navbar-item">Entry</a>
+          <a href="leadership.html" class="navbar-item">Leadership</a>
+          <a href="projects.html" class="navbar-item is-active" aria-current="page">Projects</a>
+          <a href="#" class="navbar-item">Maths&Econ</a>
+          <a href="supercur.html" class="navbar-item">Supercurriculars</a>
+          <a href="achievements.html" class="navbar-item">Achievements</a>
+          <a href="#" class="navbar-item">Gallery</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="margin-top:4.2rem;">
+    <nav class="breadcrumb is-medium mt-4 mb-5" aria-label="breadcrumbs" style="background:none;">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="is-active"><a href="#" aria-current="page">Projects</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Block -->
+    <section class="hero is-block">
+      <div class="hero-body">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="hero-title mb-2">Projects</h1>
+            <h2 class="hero-subtitle mb-3">Innovation in Code, Speech, and Experience</h2>
+            <p class="is-size-5 has-text-grey-dark">A diverse portfolio of technical, collaborative, and communicative work, each reflecting a passion for technology, ideas, and positive impact.</p>
+          </div>
+          <div class="column is-narrow">
+            <figure class="image is-256x256 hero-image" style="overflow:hidden;border-radius:1rem; box-shadow: 0 12px 22px rgba(17,85,204,0.13);">
+              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Projects Illustration" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects sections in columns -->
+    <div class="columns is-multiline">
+
+      <div class="column is-one-third">
+        <section class="content-section" id="findme">
+          <h3><span class="icon"><i class="fas fa-user-friends"></i></span>Find Me A – Mentor Platform</h3>
+          <ul class="project-list">
+            <li><span class="icon"><i class="fas fa-link"></i></span>Designed and built a mentor-mentee matching system for my school, connecting students to academic or pastoral support. This platform efficiently paired students by need and expertise, inspiring richer collaborative learning.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="column is-one-third">
+        <section class="content-section" id="twitter">
+          <h3><span class="icon"><i class="fas fa-feather-alt"></i></span>Twitter-Like App (Full Stack)</h3>
+          <ul class="project-list">
+            <li><span class="icon"><i class="fas fa-columns"></i></span>Developed a complete social posting app using Django and JavaScript. Incorporated secure authentication, profiles, post sharing, live feed, and database-backed content management—demonstrating robust backend and usable interface professional standards.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="column is-one-third">
+        <section class="content-section" id="games">
+          <h3><span class="icon"><i class="fas fa-gamepad"></i></span>Games and Simulations</h3>
+          <ul class="project-list">
+            <li><span class="icon"><i class="fas fa-spade"></i></span>Created an advanced Blackjack simulation using object-oriented Python, focusing on game logic and probability modelling.</li>
+            <li><span class="icon"><i class="fas fa-puzzle-piece"></i></span>Built a custom Word Game Solver to analyze and optimize outcomes in word puzzles, incorporating algorithmic search and performance tuning.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="column is-one-third">
+        <section class="content-section" id="ai">
+          <h3><span class="icon"><i class="fas fa-robot"></i></span>AI Projects and Coding Tools</h3>
+          <ul class="project-list">
+            <li><span class="icon"><i class="fas fa-comment-dots"></i></span>Implemented AI-powered chatbots, including an assistant using the OpenAI API, delivering smart conversational experiences for students.</li>
+            <li><span class="icon"><i class="fas fa-calculator"></i></span>Coded interactive calculators and explored functional and object-oriented design principles through software crafts.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="column is-one-third">
+        <section class="content-section" id="mathmodels">
+          <h3><span class="icon"><i class="fas fa-chart-bar"></i></span>Mathematical & Data Models</h3>
+          <ul class="project-list">
+            <li><span class="icon"><i class="fas fa-project-diagram"></i></span>Programmed mathematical models, data structure visualizations, cyber contest solutions, and curriculum projects, integrating APIs for enhanced features.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="column is-one-third">
+        <section class="content-section" id="speeches">
+          <h3><span class="icon"><i class="fas fa-microphone-alt"></i></span>Speeches and Research Publications</h3>
+          <ul class="project-list">
+            <li><span class="icon"><i class="fas fa-university"></i></span>Delivered a national talk on AI education at the Alan Turing Institute Children’s AI Summit (2025), engaging with top academics.</li>
+            <li><span class="icon"><i class="fas fa-book"></i></span>Published research and articles in the school CS Journal on AI’s environmental and ethical impact, contributing to peer discussions.</li>
+            <li><span class="icon"><i class="fas fa-comments"></i></span>Won 2nd place with the speech “AI – Its Rise and Our Fall,” demonstrating strong argumentation and real-world analysis.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="column is-one-third">
+        <section class="content-section" id="events">
+          <h3><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events and Activities</h3>
+          <ul class="project-list">
+            <li><span class="icon"><i class="fas fa-briefcase"></i></span>Participated in EY Job Shadowing and ECG consulting events, gaining practical insight into machine learning in finance and sustainability.</li>
+            <li><span class="icon"><i class="fas fa-campground"></i></span>Led Duke of Edinburgh expeditions, planning multi-day hikes, building resilience and leadership.</li>
+            <li><span class="icon"><i class="fas fa-laptop"></i></span>Founded and ran an online Python coding camp during lockdown, mentoring younger students with positive feedback.</li>
+          </ul>
+        </section>
+      </div>
+
+    </div> <!-- end columns -->
+
+    <div class="has-text-centered my-6">
+      <a href="index.html" class="btn-modern" aria-label="Back to Home">
+        <span class="icon"><i class="fas fa-arrow-left"></i></span>Back to Home
+      </a>
+    </div>
+
+  </main>
+  <footer class="footer mt-6" role="contentinfo">
+    <div class="container">
+      <p>
+        &copy; 2025 <strong>Diya Jeeva</strong><br />
+        <a href="mailto:diyajeeva@gmail.com"><i class="fas fa-envelope"></i> diyajeeva@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script>
+    // Navbar burger toggle for mobile
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgers = document.querySelectorAll('.navbar-burger');
+      burgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const menu = document.getElementById(target);
+          el.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
