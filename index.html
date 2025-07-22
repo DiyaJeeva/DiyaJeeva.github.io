@@ -1,119 +1,262 @@
 <!DOCTYPE html>
-<html class = "theme-light">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Diya Jeeva</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-    <title>Diya Jeeva Portfolio</title>
+    <!-- Bulma CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth;}
+        section {margin-bottom: 2.5rem;}
+        .profile-image {width:128px;height:128px;border-radius:50%;object-fit:cover;}
+        footer {margin-top:2em;}
+    </style>
 </head>
-
 <body>
-
     
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="https://diyajeeva.github.io">
-            <img width="150" height="80"  fill="none" src="weblogo.png">
-        </img>
-
-        </a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="false"></span>
-        <span aria-hidden="false"></span>
-        <span aria-hidden="false"></span>
-        <span aria-hidden="false"></span>
-        </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-        <a class="navbar-item is-selected" href = "index.html">
-            Gallery
-        </a>
-
-        <a class="navbar-item" href="aboutme.html">
-            About Me
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-            Computer Science
-            </a>
-
-            <div class="navbar-dropdown">
-                <a class="navbar-item">
-                    Entry
-                </a>
-                <a class="navbar-item">
-                    Leadership
-                </a>
-                <a class="navbar-item" href="csprojects.html">
-                    Projects
-                </a>
-                <a class="navbar-item" href="supercur.html">
-                    Supercurriculars
-                </a>
-            </div>
-            <a class="navbar-item">
-                Maths&Econ
-            </a>
-            <a class="navbar-item" href="achievements.html">
-                Achievements
-            </a>
-            <a class="navbar-item">
-                Reading
-            </a>
-        </div>
-        </div>
-    </div>
-    </nav>
-    
-    <h1 class="title">Gallery</h1>
-    <section class="section">
+  <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation" style="background:#fff;">
     <div class="container">
-      
-      <div class="columns is-multiline">
-        <div class="column is-one-third">
-          <figure class="image is-4by3">
-            <img src="award.jpeg" alt="Gallery Image">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3">
-            <img src="hackathonppl.jpeg" alt="Gallery Image">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3">
-            <img src="seatingjbs.jpeg" alt="Gallery Image">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3">
-            <img src="salesforce.jpeg" alt="Gallery Image">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3">
-            <img src="ewc.jpeg" alt="Gallery Image">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3">
-            <img src="emmanuel centre.jpeg" alt="Gallery Image">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3">
-            <img src="speech.jpeg" alt="Gallery Image">
-          </figure>
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#"><span class="has-text-weight-bold" style="font-size:1.3rem;color:#1155cc;">Diya Jeeva</span></a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNav" class="navbar-menu is-active">
+        <div class="navbar-end">
+          <a href="index.html" class="navbar-item is-active">Profile Summary</a>
+          <a href="aboutme.html" class="navbar-item">About Me</a>
+          <a href="entry.html" class="navbar-item">Entry</a>
+          <a href="leadership.html" class="navbar-item">Leadership</a>
+          <a href="projects.html" class="navbar-item">Projects</a>
+          <a href="#" class="navbar-item">Maths&Econ</a>
+          <a href="supercur.html" class="navbar-item">Supercurriculars</a>
+          <a href="achievements.html" class="navbar-item" aria-current="page">Achievements</a>
+          <a href="#" class="navbar-item">Gallery</a>
         </div>
       </div>
     </div>
-  </section>
+  </nav>
 
+  <!-- MAIN NAVBAR (your existing) -->
+  <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation" style="margin-top: 3rem;">
+
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <strong>Diya Jeeva</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarMain" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="#profile" class="navbar-item">Profile</a>
+          <a href="#education" class="navbar-item">Education</a>
+          <a href="#skills" class="navbar-item">Skills</a>
+          <a href="#experience" class="navbar-item">Experience</a>
+          <a href="#projects" class="navbar-item">Projects</a>
+          <a href="#publications" class="navbar-item">Publications</a>
+          <a href="#achievements" class="navbar-item">Achievements</a>
+          <a href="#hobbies" class="navbar-item">Hobbies</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section" id="profile" style="margin-top: 6rem;">
+      <div class="container has-text-centered">
+        <figure class="image is-inline-block mb-4">
+          <!-- Optional: Add your photo here if you like -->
+          <!-- <img src="your-photo.jpg" alt="Your photo" class="profile-image"> -->
+        </figure>
+        <h1 class="title"></h1>
+        <h2 class="title"></h2>
+        <h1 class="title">Diya Jeeva</h1>
+        <h2 class="subtitle">Driven and high-achieving A-Level student passionate about mathematics, computing, &amp; AI.</h2>
+        <p class="block"><em>
+        Driven and high-achieving A-Level student with deep enthusiasm for mathematics, computing, and finance. Passionate about solving real-world problems using advanced programming and AI. Demonstrated leadership through sports coaching, coding mentorship, and AI publication. Eager to apply academic, coding, and leadership expertise to contribute and grow within the industry.
+        </em></p>
+        <div class="tags is-centered mb-2">
+          <span class="tag is-info">Learn</span>
+          <span class="tag is-primary">Code</span>
+          <span class="tag is-success">Solve</span>
+          <span class="tag is-link">Speak</span>
+          <span class="tag is-warning">Give</span>
+          <span class="tag is-danger">Lead</span>
+          <span class="tag is-dark">Hike</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="title is-4">
+          <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+          Education
+        </h2>
+        <div class="content">
+          <ul>
+            <li><strong>Newstead Wood School</strong> (2019 – Present)
+              <ul>
+                <li>A-Levels: Predicted A* A* A* A* in Maths, Further Maths, Computing, Economics</li>
+                <li>GCSEs: Ten 9’s (A**) including Maths, FSMQ, Computing, and Physics</li>
+                <li>Advanced programming courses, Harvard CS50, pair-programming, self-taught</li>
+              </ul>
+            </li>
+            <li><strong>Blackheath High School</strong> (2015–2019)
+              <ul><li>Spelling bee, Maths awards, Merit scholarship recipient</li></ul>
+            </li>
+            <li><strong>St Edmunds RC Primary School</strong> (2012–2015)
+              <ul><li>Top Set in Reading & Maths</li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="title is-4">
+          <span class="icon"><i class="fas fa-cogs"></i></span>
+          Skills
+        </h2>
+        <div class="tags">
+          <span class="tag is-primary">Python</span>
+          <span class="tag is-link">HTML</span>
+          <span class="tag is-info">JavaScript</span>
+          <span class="tag is-dark">Django</span>
+          <span class="tag is-success">OpenAI API</span>
+          <span class="tag is-light">Data Structures</span>
+        </div>
+        <div class="content">
+          <ul>
+            <li><strong>Programming:</strong> Python, HTML, JavaScript, web apps, databases, OpenAI integration</li>
+            <li><strong>Analytical Thinking:</strong> Proven problem solver in UKMT challenges & Olympiads</li>
+            <li><strong>Project Management:</strong> Led code workshops, hackathons, product prototyping</li>
+            <li><strong>Leadership:</strong> Gymnastics coach, Computing Society leader, public speaker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="title is-4">
+          <span class="icon"><i class="fas fa-briefcase"></i></span>
+          Work Experience
+        </h2>
+        <div class="content">
+          <ul>
+            <li>
+              <strong>EY Job Shadowing</strong> (Aug 2024)
+              <ul>
+                <li>Worked with AI specialists, cloud teams, and consultants</li>
+                <li>Built insights into ML & FinTech; praised by Head of AI Consulting</li>
+              </ul>
+            </li>
+            <li>
+              <strong>EY ECG Experience</strong>
+              <ul><li>Solved a bank’s environmental challenge in a real consulting environment</li></ul>
+            </li>
+            <li>
+              <strong>Gymnastics Coach</strong>, Allegro School (2022–2024)
+              <ul><li>Mentored 100+ gymnasts, managed junior training, balanced school & work</li></ul>
+            </li>
+            <li>
+              <strong>Online Coding Camp</strong> (2022)
+              <ul><li>Organized Python camp for 8 students aged 11–15, enhanced teaching skills</li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="title is-4">
+          <span class="icon"><i class="fas fa-code"></i></span>
+          Coding Projects & Activities
+        </h2>
+        <div class="content">
+          <ul>
+            <li>‘Find Me A’ mentor-mentee platform for school</li>
+            <li>Full Twitter-like app (Django & JS), showcased full-stack skills</li>
+            <li>Blackjack simulation with OOP</li>
+            <li>AI chatbot using ChatGPT’s API</li>
+            <li>Calculator app, interactive games, AI-powered chatbots</li>
+            <li>Word Game Solver – Both Ways</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="container">
+        <h2 class="title is-4">
+          <span class="icon"><i class="fas fa-microphone-alt"></i></span>
+          Public Speaking & Research
+        </h2>
+        <div class="content">
+          <ul>
+            <li>AI in Education: Alan Turing Institute Children’s AI Summit (2025)</li>
+            <li>Salesforce – AI for Climate Solutions: Global Climate Change competition (2024)</li>
+            <li>Computer Science in Action: Emmanuel Centre (2025)</li>
+            <li>AI Ethics: 2nd place, school competition, “AI – Its Rise and Our Fall” (2023)</li>
+            <li>CS Journal – AI research on environmental impact and ethics (2025)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="container">
+        <h2 class="title is-4">
+          <span class="icon"><i class="fas fa-trophy"></i></span>
+          Achievements & Certifications
+        </h2>
+        <div class="content">
+          <ul>
+            <li>UKMT Intermediate Maths Challenge: Gold, Best in Year, Hamilton Olympiad [2023/24]</li>
+            <li>National Computer Science Award Winner, Best in Everyone UL</li>
+            <li>Perse Coding Challenge: Best in School, progressed to Round 2 [2023/24]</li>
+            <li>UK Bebras Challenge: Gold, progressed to Oxford Challenge [2023/24]</li>
+            <li>Oxford Coding Challenge Gold Award [2025]</li>
+            <li>Economics World Cup: Top 15% globally, progressed to Round 2</li>
+            <li>Duke of Edinburgh Bronze Award [2023]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hobbies">
+      <div class="container">
+        <h2 class="title is-4">
+          <span class="icon"><i class="fas fa-music"></i></span>
+          Hobbies & Interests
+        </h2>
+        <div class="content">
+          <ul>
+            <li>Skilled pianist (Grade 6 ABRSM), performances at recitals</li>
+            <li>Hiking: West Highland Way (Scotland), Valbona Valley (Albania), Teide & Anaga (Tenerife), Mount Sigiriya (Sri Lanka)</li>
+            <li>Tennis: Play and coach</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+            <strong>Diya Jeeva</strong> &copy; 2025<br>
+            <span class="icon is-small"><i class="fas fa-envelope"></i></span>
+            <a href="mailto:your@email.com">diyajeeva@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
 </body>
-
 </html>
