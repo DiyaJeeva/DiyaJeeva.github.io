@@ -90,55 +90,66 @@
         <li>Intermediate Maths Challenge UKMT: Best in Year and Gold Awards, participated in Hamilton Olympiad and Kangaroo Rounds [2023, 2024]</li>
         <li>Duke of Edinburgh Bronze Award [2023] </li>
     </ul>
+
+    <section class="section">
+        <div class="container">
+        <button class="button is-primary is-medium" id="openModal">Perse Coding Challenge</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="challengeModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Perse Coding Challenge</p>
+            <button class="delete" aria-label="close" id="closeModal"></button>
+        </header>
+        <section class="modal-card-body has-text-centered">
+            <p class="title is-4">Best in School Certificate</p>
+            <p class="title is-5">Distinction Certificates</p>
+            <p class="title is-6">I have regularly participated in the Perse Coding Team Challenge, both individually and alongside a partner. Each time, I have thoroughly enjoyed the challenge it presents and the opportunity to improve my problem-solving, programming and teamwork skills. My efforts have been recognized with multiple Distinction certificates and Best in School certificates, which reflect my enthusiasm and consistent performance in the competition. This has allowed me to progress to the difficult, yet engrossing Round 2</p>
+        </section>
+        <footer class="modal-card-foot is-justify-content-center">
+            <button class="button is-danger " id="closeModalFooter">Back to Others</button>
+        </footer>
+        </div>
+    </div>
   <section class="section">
     <div class="container">
-      <button class="button is-primary is-medium" id="openModal">Perse Coding Challenge</button>
+      <div class="columns is-multiline">
+        <!-- Column 1 -->
+        <div class="column is-one-third">
+          <button class="button is-primary is-medium" data-target="modal1">Challenge 1</button>
+        </div>
+        <!-- Column 2 -->
+        <div class="column is-one-third">
+          <button class="button is-link is-medium" data-target="modal2">Challenge 2</button>
+        </div>
+        <!-- Column 3 -->
+        <div class="column is-one-third">
+          <button class="button is-info is-medium" data-target="modal3">Challenge 3</button>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- Modal -->
-  <div class="modal" id="challengeModal">
+  </section>   
+  <div class="modal" id="modal1">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Perse Coding Challenge</p>
-        <button class="delete" aria-label="close" id="closeModal"></button>
+        <p class="modal-card-title">Perse Coding Challenge 1</p>
+        <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body has-text-centered">
-        <p class="title is-4">Best in School Certificate</p>
-        <p class="title is-5">Distinction Certificates</p>
-        <p class="title is-6">I have regularly participated in the Perse Coding Team Challenge, both individually and alongside a partner. Each time, I have thoroughly enjoyed the challenge it presents and the opportunity to improve my problem-solving, programming and teamwork skills. My efforts have been recognized with multiple Distinction certificates and Best in School certificates, which reflect my enthusiasm and consistent performance in the competition. This has allowed me to progress to the difficult, yet engrossing Round 2</p>
+            <p class="title is-4">Best in School Certificate</p>
+            <p class="title is-5">Distinction Certificates</p>
+            <p class="title is-6">I have regularly participated in the Perse Coding Team Challenge, both individually and alongside a partner. Each time, I have thoroughly enjoyed the challenge it presents and the opportunity to improve my problem-solving, programming and teamwork skills. My efforts have been recognized with multiple Distinction certificates and Best in School certificates, which reflect my enthusiasm and consistent performance in the competition. This has allowed me to progress to the difficult, yet engrossing Round 2</p>
       </section>
       <footer class="modal-card-foot is-justify-content-center">
-        <button class="button is-danger " id="closeModalFooter">Back to Others</button>
+        <button class="button is-danger close-modal">Close</button>
       </footer>
     </div>
   </div>
-  <section class="section">
-    <div class="container">
-      <button class="button is-primary is-medium" id="openModal">Perse Coding Challenge</button>
-    </div>
-  </section>
-
-  <!-- Modal -->
-  <div class="modal" id="challengeModal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Perse Coding Challenge</p>
-        <button class="delete" aria-label="close" id="closeModal"></button>
-      </header>
-      <section class="modal-card-body has-text-centered">
-        <p class="title is-4">Best in School Certificate</p>
-        <p class="title is-5">Distinction Certificates</p>
-        <p class="title is-6">I have regularly participated in the Perse Coding Team Challenge, both individually and alongside a partner. Each time, I have thoroughly enjoyed the challenge it presents and the opportunity to improve my problem-solving, programming and teamwork skills. My efforts have been recognized with multiple Distinction certificates and Best in School certificates, which reflect my enthusiasm and consistent performance in the competition. This has allowed me to progress to the difficult, yet engrossing Round 2</p>
-      </section>
-      <footer class="modal-card-foot is-justify-content-center">
-        <button class="button is-danger " id="closeModalFooter">Back to Others</button>
-      </footer>
-    </div>
-  </div>
-
   <!-- JavaScript to handle modal -->
   <script>
     const openBtn = document.getElementById('openModal');
@@ -152,6 +163,27 @@
     closeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         modal.classList.remove('is-active');
+      });
+    });
+  </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Open modals
+      document.querySelectorAll('[data-target]').forEach(button => {
+        button.addEventListener('click', () => {
+          const modalId = button.getAttribute('data-target');
+          const modal = document.getElementById(modalId);
+          if (modal) modal.classList.add('is-active');
+        });
+      });
+
+      // Close modals
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.querySelectorAll('.modal-background, .delete, .close-modal').forEach(el => {
+          el.addEventListener('click', () => {
+            modal.classList.remove('is-active');
+          });
+        });
       });
     });
   </script>
